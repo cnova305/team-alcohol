@@ -70,6 +70,9 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
           >
             Id {patron.id}
           </Typography>
+          <Typography>
+            {"Saturation:" + currentSaturation * 100 + "%"}
+          </Typography>
           <Button onClick={() => setAddDrink(true)} variant="contained">
             Add Drinks
           </Button>
