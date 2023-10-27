@@ -65,7 +65,8 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
           <Typography>Weight {patron.weight}</Typography>
           <Typography
             sx={{
-              color: currentSaturation < alcoholSaturation ? "black" : "red",
+              color:
+                currentSaturation * 100 < alcoholSaturation ? "black" : "red",
             }}
           >
             Id {patron.id}
