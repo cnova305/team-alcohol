@@ -1,0 +1,36 @@
+Question 1.5.2
+
+The Document Object Model (DOM) is a programming interface for HTML and XML documents. 
+It defines the logical structure of documents and the way a document is accessed and manipulated.
+It represents a webpage in a structured hierarchical way so that it will become easier for programmers and users to work through the document. 
+With DOM, we can easily access and manipulate elements of HTML
+
+By using virtual DOM, we can find out what is changed and with that, we can apply only those changes to real DOM instead of replacing entire DOM.
+
+Question 1.5.3
+
+Server-side rendering is the most common method for displaying information onto the screen. 
+It works by converting HTML files in the server into usable information for the browser.
+
+Advantages:
+
+>Faster page loads
+>Better performance 
+>Easy indexation by search engines
+>Better in terms of accessibility
+
+Disadvantages:
+
+>Costly
+>Compatibility Issues
+>Slow page rendering
+
+Question 1.5.4
+
+JSX stands for Javascript XML and it is a very useful tool for development in React. It is an extension of the JavaScript language which gives us 
+the ability to write HTML elements in Javascript and place them in the DOM by converting the HTML tags into React elements without the need for other 
+methods like createElement() or appendChild().
+
+JSX is interpreted by browser JavaScript engines by way of transpilation.JSX code is transformed into standard JavaScript using a tool like Babel 
+before it's served to the browser. Babel is a popular transpiler that can convert JSX into plain JavaScript. 
+This step usually takes place during the build process of a web application.

@@ -23,7 +23,7 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
   const [addDrink, setAddDrink] = useState(false);
   const navigator = useNavigate();
 
-  const alcoholSaturation = 0.01; //estimated limit
+  const alcoholSaturation = 0.002; //estimated limit
 
   const getSaturation = (patron: Patron) => {
     let saturation = 0;
@@ -37,6 +37,8 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
     return saturation;
   };
   const currentSaturation = getSaturation(patron);
+
+  console.log(currentSaturation);
 
   const formik = useFormik({
     initialValues: {
@@ -117,7 +119,12 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
             <Typography>Drinks</Typography>
             <CardContent>
               {patron.drinks.map((drink) => (
-                <Typography>{drink.strDrink}</Typography>
+                <Stack direction="row">
+                  <Typography>{drink.strDrink + " "}</Typography>
+                  <Typography>
+                    {getAlcoholABV(drink.strIngredient1) + "%"}
+                  </Typography>
+                </Stack>
               ))}
             </CardContent>
             <Button onClick={() => setViewDrinks(false)}>Close</Button>
