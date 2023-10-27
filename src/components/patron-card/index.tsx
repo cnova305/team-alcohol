@@ -23,7 +23,7 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
   const [addDrink, setAddDrink] = useState(false);
   const navigator = useNavigate();
 
-  const alcoholSaturation = 0.002; //estimated limit
+  const alcoholSaturation = 0.00003; //estimated limit
 
   const getSaturation = (patron: Patron) => {
     let saturation = 0;
