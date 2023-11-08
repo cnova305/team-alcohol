@@ -1,6 +1,6 @@
 import axios from "axios";
 import { doc, updateDoc, arrayUnion } from "firebase/firestore";
-import { database } from "../firebase";
+import { database } from "../../firebase";
 
 export const postDrink = async (patronId: string, drinkName: string) => {
   await axios(

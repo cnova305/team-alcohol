@@ -6,7 +6,7 @@ import {
   getDoc,
   doc,
 } from "firebase/firestore";
-import { database } from "../firebase";
+import { database } from "../../firebase";
 
 export const getPatrons = async () => {
   const patronList: any[] = [];

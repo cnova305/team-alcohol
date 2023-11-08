@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { useQuery, useMutation, useQueryClient } from "react-query";
 import { useNavigate } from "react-router-dom";
 
-import { getPatrons, postPatron } from "../../api/patrons";
+import { getPatrons, postPatron } from "../../api/firebase/patrons";
 import { useState } from "react";
 
 const BarCard = () => {

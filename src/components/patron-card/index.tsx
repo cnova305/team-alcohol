@@ -8,8 +8,8 @@ import {
 } from "@mui/material";
 import { useFormik } from "formik";
 import { useState } from "react";
-import { postDrink } from "../../api/drinks";
-import { deletePatron } from "../../api/patrons";
+import { postDrink } from "../../api/firebase/drinks";
+import { deletePatron } from "../../api/firebase/patrons";
 import { useNavigate } from "react-router-dom";
 import { Patron } from "../../types";
 import {
