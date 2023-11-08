@@ -8,5 +8,6 @@ export const urls = {
     getPatrons: `${backEndUrl}/api/patrons/`,
     getPatronById: `${backEndUrl}/api/patrons/getPatronById/`,
     deletePatronById: `${backEndUrl}/api/patrons/deletePatronById/`,
+    addPatron: `${backEndUrl}/api/patrons/addPatron/`,
   },
 };
