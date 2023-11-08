@@ -7,5 +7,6 @@ export const urls = {
   api: {
     getPatrons: `${backEndUrl}/api/patrons/`,
     getPatronById: `${backEndUrl}/api/patrons/getPatronById/`,
+    deletePatronById: `${backEndUrl}/api/patrons/deletePatronById/`,
   },
 };
