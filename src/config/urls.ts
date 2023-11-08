@@ -1,4 +1,4 @@
-const backEndUrl = "localhost:5000";
+const backEndUrl = "http://localhost:5000";
 
 export const urls = {
   root: "/",
