@@ -7,3 +7,8 @@ export const getPatrons = async (): Promise<Patron[]> => {
   const { data } = await axios.get(urls.api.getPatrons);
   return data;
 };
+
+export const getPatron = async (id: string): Promise<Patron> => {
+  const { data } = await axios.get(`${urls.api.getPatronById}${id}`);
+  return data[0];
+};
