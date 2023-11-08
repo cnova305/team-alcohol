@@ -9,7 +9,7 @@ import {
 import { useFormik } from "formik";
 import { useState } from "react";
 import { postDrink } from "../../api/firebase/drinks";
-import { deletePatron } from "../../api/firebase/patrons";
+import { deletePatron } from "../../api/nodejs/patrons";
 import { useNavigate } from "react-router-dom";
 import { Patron } from "../../types";
 import {
@@ -17,11 +17,22 @@ import {
   getAlcoholABV,
   timeSinceConsumption,
 } from "../../utils";
+import { useMutation, useQueryClient } from "react-query";
 
 const PatronCard = ({ patron }: { patron: Patron }) => {
   const [viewDrinks, setViewDrinks] = useState(false);
+  const queryClient = useQueryClient();
   const [addDrink, setAddDrink] = useState(false);
   const navigator = useNavigate();
+
+  const mutation = useMutation({
+    mutationFn: deletePatron,
+    onSuccess: () => {
+      // Invalidate and refetch
+      queryClient.invalidateQueries({ queryKey: ["patrons"] });
+      navigator("/");
+    },
+  });
 
   const alcoholSaturation = 0.00003; //estimated limit
 
@@ -38,8 +49,6 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
     return saturation;
   };
   const currentSaturation = getSaturation(patron);
-
-  console.log(currentSaturation);
 
   const formik = useFormik({
     initialValues: {
@@ -83,8 +92,7 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
           </Button>
           <Button
             onClick={() => {
-              deletePatron(patron.id);
-              navigator("/");
+              mutation.mutate(patron.id);
             }}
             variant="text"
           >
