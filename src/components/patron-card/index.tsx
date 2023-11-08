@@ -27,7 +27,8 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
 
   const getSaturation = (patron: Patron) => {
     let saturation = 0;
-    for (const drink of patron.drinks) {
+    const patronDrinks = patron.drinks || [];
+    for (const drink of patronDrinks) {
       saturation += calculateAlcoholSaturation(
         getAlcoholABV(drink.strIngredient1),
         parseInt(patron.weight, 10),
@@ -122,7 +123,7 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
           <Stack justifyContent="center" alignItems="center">
             <Typography>Drinks</Typography>
             <CardContent>
-              {patron.drinks.map((drink) => (
+              {patron.drinks?.map((drink) => (
                 <Stack direction="row">
                   <Typography>{drink.strDrink + " "}</Typography>
                   <Typography>
