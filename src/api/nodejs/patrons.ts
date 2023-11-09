@@ -20,7 +20,8 @@ export const getPatron = async (id: string): Promise<Patron> => {
 
 export const postPatron = async (values: object) => {
   const uid = generateUID();
-  await axios.post(`${urls.api.addPatron}${uid}`, { ...values, id: uid });
+  await axios.post(`${urls.api.addPatron}`, { ...values, id: uid });
+  return;
 };
 
 export const deletePatron = async (id: string) => {
