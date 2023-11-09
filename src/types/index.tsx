@@ -2,7 +2,7 @@ export interface Patron {
   id: string;
   name: string;
   weight: string;
-  drinks?: Drink[];
+  drinks: Drink[];
 }
 
 export interface Drink {

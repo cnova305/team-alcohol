@@ -38,7 +38,7 @@ export const calculateAlcoholSaturation = (
   patronWeight: number,
   timeSinceConsumption: number
 ) => {
-  const alcoholMetabolismRate = 0.02; //percent per hour
+  const alcoholMetabolismRate = 20.0; //percent per hour
   const alcoholConsumed =
     abvDrink / (patronWeight * timeSinceConsumption * alcoholMetabolismRate);
   return alcoholConsumed;
