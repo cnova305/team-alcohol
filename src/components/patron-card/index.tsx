@@ -91,6 +91,12 @@ const PatronCard = ({ patron }: { patron: Patron }) => {
             View Drinks
           </Button>
           <Button
+            onClick={() => navigator(`/patron/${patron?.id}`)}
+            variant="contained"
+          >
+            View Patron
+          </Button>
+          <Button
             onClick={() => {
               mutation.mutate(patron.id);
             }}
