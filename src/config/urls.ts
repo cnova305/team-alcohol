@@ -9,5 +9,6 @@ export const urls = {
     getPatronById: `${backEndUrl}/api/patrons/getPatronById/`,
     deletePatronById: `${backEndUrl}/api/patrons/deletePatronById/`,
     addPatron: `${backEndUrl}/api/patrons/addPatron/`,
+    addDrink: `${backEndUrl}/api/patrons/addDrink/`,
   },
 };
