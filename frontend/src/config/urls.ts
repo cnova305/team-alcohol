@@ -1,4 +1,4 @@
-const backEndUrl = "http://localhost:13000";
+const backEndUrl = "http://api-service:13000";
 
 export const urls = {
   root: "/",

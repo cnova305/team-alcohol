@@ -1,6 +1,25 @@
 const pool = require("../db");
 const queries = require("./queries");
 
+const setUpPatrons = async (req, res) => {
+  try {
+    const data = await pool.query(queries.setUpPatrons);
+    res.status(201).send("Patrons table has been added");
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+};
+
+const deletePatrons = async (req, res) => {
+  try {
+    const data = await pool.query(queries.setUpPatrons);
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+};
+
 const getPatrons = async (req, res) => {
   try {
     const data = await pool.query(queries.getPatrons);
@@ -75,6 +94,8 @@ const addDrink = async (req, res) => {
 };
 
 module.exports = {
+  setUpPatrons,
+  deletePatrons,
   getPatrons,
   getPatronById,
   addPatron,

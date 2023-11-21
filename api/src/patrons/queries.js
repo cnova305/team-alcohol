@@ -1,3 +1,6 @@
+const setUpPatrons =
+  "CREATE TABLE patrons (id VARCHAR(50), name VARCHAR(100), weight VARCHAR(20), drinks JSONB[]) ";
+const deletePatrons = "DROP TABLE IF EXISTS patrons";
 const getPatrons = "SELECT * FROM patrons";
 const getPatronById = "SELECT * FROM patrons WHERE id = $1";
 const addPatron = "INSERT INTO patrons (name, weight, id) VALUES ($1, $2, $3)";
@@ -13,6 +16,8 @@ const addDrink = (
       WHERE id = $1;`;
 
 module.exports = {
+  setUpPatrons,
+  deletePatrons,
   getPatrons,
   getPatronById,
   addPatron,

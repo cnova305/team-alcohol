@@ -46,6 +46,17 @@ spec:
               cpu: "500m"
           ports:
             - containerPort: 13000
+          env:
+            - name: PGHOST
+              value: postgres-service
+            - name: PGUSER
+              value: postgres
+            - name: PGPORT
+              value: "5432"
+            - name: PGPASSWORD
+              value: postgres
+            - name: PGDATABASE
+              value: postgres
 
 ---
 apiVersion: v1

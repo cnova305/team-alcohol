@@ -4,6 +4,8 @@ const controller = require("./controller");
 
 const router = Router();
 
+router.get("/setup", controller.setUpPatrons);
+router.get("delete", controller.deletePatrons);
 router.get("/", controller.getPatrons);
 router.post("/addPatron", controller.addPatron);
 router.get("/getPatronById/:id", controller.getPatronById);
