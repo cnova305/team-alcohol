@@ -1,0 +1,9 @@
+{
+  "command": [
+    "curl",
+    "http://192.168.49.2:32590/api/patrons",
+    "-H",
+    "'Content-Type: application/json'"
+  ],
+  "expected_status": "200"
+}
