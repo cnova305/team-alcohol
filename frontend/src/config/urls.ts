@@ -1,14 +1,14 @@
-const backEndUrl = "http://api-service:13000";
+// const backEndUrl = "http://10.98.197.66:13000";
 
 export const urls = {
   root: "/",
   patrons: "/patrons",
   patron: "/patron/:id",
   api: {
-    getPatrons: `${backEndUrl}/api/patrons/`,
-    getPatronById: `${backEndUrl}/api/patrons/getPatronById/`,
-    deletePatronById: `${backEndUrl}/api/patrons/deletePatronById/`,
-    addPatron: `${backEndUrl}/api/patrons/addPatron/`,
-    addDrink: `${backEndUrl}/api/patrons/addDrink/`,
+    getPatrons: `/api/patrons`,
+    getPatronById: `/api/patrons/getPatronById`,
+    deletePatronById: `/api/patrons/deletePatronById`,
+    addPatron: `/api/patrons/addPatron`,
+    addDrink: `/api/patrons/addDrink`,
   },
 };
