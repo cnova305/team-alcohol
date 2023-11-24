@@ -12,6 +12,6 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.use("/api/patrons/", patronsRoutes);
+app.use("/patrons", patronsRoutes);
 
 app.listen(port, () => console.log(`Server has started on port: ${port}`));
