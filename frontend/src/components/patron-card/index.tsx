@@ -8,16 +8,16 @@ import {
 } from "@mui/material";
 import { useFormik } from "formik";
 import { useState } from "react";
-import { postDrink } from "../../api/nodejs/drinks";
-import { deletePatron } from "../../api/nodejs/patrons";
+import { useMutation, useQueryClient } from "react-query";
 import { useNavigate } from "react-router-dom";
+import { postDrink } from "../../api/firebase/drinks";
+import { deletePatron } from "../../api/firebase/patrons";
 import { Patron } from "../../types";
 import {
   calculateAlcoholSaturation,
   getAlcoholABV,
   timeSinceConsumption,
 } from "../../utils";
-import { useMutation, useQueryClient } from "react-query";
 
 const PatronCard = ({ patron }: { patron: Patron }) => {
   const [viewDrinks, setViewDrinks] = useState(false);

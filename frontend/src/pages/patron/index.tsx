@@ -1,9 +1,9 @@
 import { Stack, Typography } from "@mui/material";
 
+import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import { useQuery, useMutation, useQueryClient } from "react-query";
-import { getPatron } from "../../api/nodejs/patrons";
-import useInterval from "../../hooks/use-interval";
+import { getPatron } from "../../api/firebase/patrons";
+import { Drink } from "../../types";
 import { getAlcoholABV } from "../../utils";
 
 const Patron = () => {
@@ -16,7 +16,7 @@ const Patron = () => {
       <h1>Patron</h1>
       <Typography>Name {patron?.name}</Typography>
       <Typography>Weight {patron?.weight}</Typography>
-      {patron?.drinks?.map((drink) => (
+      {patron?.drinks?.map((drink: Drink) => (
         <Stack direction="row">
           <Typography>{drink.strDrink + " "}</Typography>
           <Typography>{getAlcoholABV(drink.strIngredient1) + "%"}</Typography>

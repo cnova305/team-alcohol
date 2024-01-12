@@ -1,8 +1,7 @@
-import React from "react";
-import PatronCard from "../../components/patron-card";
 import { Stack } from "@mui/material";
 import { useQuery } from "react-query";
-import { getPatrons } from "../../api/nodejs/patrons";
+import { getPatrons } from "../../api/firebase/patrons";
+import PatronCard from "../../components/patron-card";
 import useInterval from "../../hooks/use-interval";
 
 const Patrons = () => {

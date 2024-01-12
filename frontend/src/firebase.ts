@@ -4,13 +4,12 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA58iX3Ci4nV67q9cZ3hyK_mHsIYJpgLAQ",
-  authDomain: "team-alcohol.firebaseapp.com",
-  projectId: "team-alcohol",
-  storageBucket: "team-alcohol.appspot.com",
-  messagingSenderId: "76866548015",
-  appId: "1:76866548015:web:ec3b66c2901b56a626f1da",
-  measurementId: "G-L1P7CCKXFB",
+  apiKey: "AIzaSyCGuzarhYaxVW9SFkN5JYh4nSSJXBqMm1g",
+  authDomain: "fir-team-alcohol.firebaseapp.com",
+  projectId: "fir-team-alcohol",
+  storageBucket: "fir-team-alcohol.appspot.com",
+  messagingSenderId: "276709586083",
+  appId: "1:276709586083:web:5d710db104f39bef523b16",
 };
 
 // Initialize Firebase
